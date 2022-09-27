@@ -21,21 +21,22 @@
             <li><a class="menuBar barLast" href="">My Account</a></li>
         </ul>
         <h2>Create New Item Listing</h2>
+        <form action="Scripts/sellUsed_upload.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="column70">
                 <table>
                 <tr>
                     <td>Item Name</td>
-                    <td class="text-1"><input type="text" placeholder="Required"></td>
+                    <td class="text-1"><input type="text" placeholder="Required" required></td>
                     <td>Quantities Available</td>
-                    <td class="text-1"><input type="number" value="1" min="1" max="5"></td>
+                    <td class="text-1"><input type="number" value="1" min="1" max="20" required></td>
                 </tr>
                 <tr>
                     <td>Price</td>
-                    <td class="text-1"><input type="text" inputmode="decimal" placeholder="Required"></td>
+                    <td class="text-1"><input type="number" placeholder="Required" min="1" max="9999" required></td>
                     <td>Item Condition</td>
                     <td class="text-1"> 
-                        <select name="isUsed" id="isUsed">
+                        <select name="isUsed" id="isUsed" required>
                         <option selected disabled hidden>Select</option>
                         <option value="New">New</option>
                         <option value="Used">Used</option>
@@ -44,7 +45,7 @@
                 </tr>
                 <tr>
                     <td>Shipping Fee</td>
-                    <td class="text-1"><input type="text" inputmode="decimal" placeholder="Required"></td>
+                    <td class="text-1"><input type="number" placeholder="Required" min="0" max="9999" required></td>
                     <td>Category</td>
                     <td class="text-1"> 
                         <select name="productCat" id="productCat">
@@ -58,7 +59,7 @@
                     <td>Description</td>
                 </tr>
                 </table>
-                <textarea placeholder="Required" rows="6"></textarea>
+                <textarea placeholder="Required" rows="6" required></textarea>
                 <input type="submit" value="Create Listing">
             </div>
             <div class="column30">
@@ -67,7 +68,9 @@
                     <img class="imgFit" src="img/placeholder.png">
                 </div>
                 <input type="button" value="Upload Product Image">
+                <input type="file" name="fileToUpload" id="fileToUpload">
             </div>
     </div>
+</form>
   </body>
 </html>
