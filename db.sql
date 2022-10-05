@@ -1,11 +1,11 @@
 SET @@AUTOCOMMIT = 1;
 
-DROP DATABASE IF EXISTS Practical3;
-CREATE DATABASE Practical3;
+DROP DATABASE IF EXISTS Group2030;
+CREATE DATABASE Group2030;
 
 USE Practical3;
 
-CREATE TABLE User(
+CREATE TABLE user_form(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     FName varchar(100),
     LName varchar(100),
@@ -38,5 +38,7 @@ CREATE TABLE ItemU(
 
 
 CREATE user IF NOT EXISTS dbadmin@localhost;
-GRANT all privileges ON Practical3.Task TO dbadmin@localhost;
+GRANT all privileges ON Group2030.user_form TO dbadmin@localhost;
+GRANT all privileges ON Group2030.ItemN TO dbadmin@localhost;
+GRANT all privileges ON Group2030.ItemU TO dbadmin@localhost;
 
