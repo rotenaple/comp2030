@@ -46,7 +46,7 @@
                 </tr>
                 </table>
                 <td><br><a href="AccLog.html">Already have an Account?</a></td>
-                    <td><input type="button" name="Submit" value="Sign-up"></td>
+                    <td><input type="Submit" name="Submit" value="Sign-up"></td>
             </div>
             
     </div>

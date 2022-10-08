@@ -40,6 +40,12 @@ $stmt->bind_param("sssss",
                 $_POST["DOB"],
                 $password_hash);
 
-$stmt->execute();
+$stmt->execute()
+echo "pRAY";
+if ($stmt->execute()) { 
+    echo "PRAY IT WORKS";
+} else {
+    echo "fAILURE";
+}
 
 echo "please";
