@@ -28,9 +28,7 @@ if(isset($_POST['submit'])){
      
    }else{
       $error[] = 'incorrect email or password!';
-   }
-
-};
+   };
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +72,7 @@ if(isset($_POST['submit'])){
                     <td class="text-1"><input type="text" placeholder="Required" required></td>
                 </tr>
                 </table>
-                <td><br><a href="register.html">Don't Have an Account?</a></td>
+                <td><br><a href="Register.html">Don't Have an Account?</a></td>
                     <td><input type="button" value="Log-in"></td>
             </div>
             

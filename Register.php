@@ -1,38 +1,3 @@
-<?php
-
-@include 'config.php';
-
-if(isset($_POST['Submit'])){
-
-   $Fname = mysqli_real_escape_string($conn, $_POST['name']);
-   $Lname = mysqli_real_escape_string($conn, $_POST['name']);
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $DOB = mysqli_real_escape_string($conn, $_POST['DOB']);
-   $pass = md5($_POST['password']);
-   $cpass = md5($_POST['cpassword']);
-
-   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
-
-   $result = mysqli_query($conn, $select);
-
-   if(mysqli_num_rows($result) > 0){
-
-      $error[] = 'user already exist!';
-
-   }else{
-
-      if($pass != $cpass){
-         $error[] = 'password not matched!';
-      }else{
-         $insert = "INSERT INTO user_form(Fname, Lname, email, DOB, password) VALUES('$Fname','$Lname','$email','$DOB','$pass')";
-         mysqli_query($conn, $insert);
-         header('location:login_form.php');
-      }
-   }
-
-};
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -57,15 +22,15 @@ if(isset($_POST['Submit'])){
             <li><a class="menuBar active" href="AccMain.html">Login / Signup</a></li>
         </ul>
         <h2>Register</h2>
-        <form action="scripts/sellUsed_upload.php" method="post" enctype="multipart/form-data">
+        <form action="config.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="column70">
                 <table>
                 <tr>
-                    <td>First Name</td>
-                    <td class="text-1"><input name="Fname" type="text" placeholder="Required" required></td>
-                    <td>Last Name</td>
-                    <td class="text-1"><input name="Lname" type="text" placeholder="Required" required></td>
+                    <td>Username</td>
+                    <td class="text-1"><input name="Username" type="text" placeholder="Required" required></td>
+                    <td>FullName</td>
+                    <td class="text-1"><input name="FullName" type="text" placeholder="Required" required></td>
                 </tr>
                 <tr>
                     <td>Email</td>
@@ -81,7 +46,7 @@ if(isset($_POST['Submit'])){
                 </tr>
                 </table>
                 <td><br><a href="AccLog.html">Already have an Account?</a></td>
-                    <td><input type="button" name="Submit" value="Sign-up"></td>
+                    <td><input type="Submit" name="Submit" value="Sign-up"></td>
             </div>
             
     </div>
