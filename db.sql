@@ -3,7 +3,7 @@ SET @@AUTOCOMMIT = 1;
 DROP DATABASE IF EXISTS Group2030;
 CREATE DATABASE Group2030;
 
-USE Practical3;
+USE Group2030;
 
 CREATE TABLE user_form(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -11,7 +11,7 @@ CREATE TABLE user_form(
     LName varchar(100),
     Password varchar(100),
     Email varchar(100),
-    Dob DATE().
+    Dob DATE
 ) AUTO_INCREMENT = 1;
 
 
@@ -22,7 +22,7 @@ CREATE TABLE ItemN(
     Ship int,
     Category varchar(100),
     itemCon varchar(100),
-    Description text,
+    Description text
 ) AUTO_INCREMENT = 1;
 
 
@@ -33,7 +33,7 @@ CREATE TABLE ItemU(
     Ship int,
     Category varchar(100),
     itemCon varchar(100),
-    Description text,
+    Description text
 ) AUTO_INCREMENT = 1;
 
 
