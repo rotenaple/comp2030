@@ -41,7 +41,7 @@ $stmt->bind_param("sssss",
                 $password_hash);
 
 $stmt->execute()
-echo "pRAY";
+
 if ($stmt->execute()) { 
     echo "PRAY IT WORKS";
 } else {
