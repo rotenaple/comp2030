@@ -22,25 +22,28 @@ if ($_POST["password"] !== $_POST["cpassword"]) {
 
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-$mysqli = require __DIR__ . "/ACCdatabase.php";
+require_once "ACCdatabase.php";
 
-$sql = "INSERT INTO user_form (Uname, Fname, email, date_of_birth, password)
+$sql = "INSERT INTO user_form (FName, LName, Email, Dob, password)
         VALUES (?, ?, ?, ?, ?)";
 
-$stmt = $mysqli->stmt_init();
+$stmt = mysqli_stmt_init($conn);
 
 if( ! $stmt->prepare($sql) ) {
-    die("Error within SQL " . $mysqli->error);
+    die("Error within SQL " . $conn->error);
 }
 
 $stmt->bind_param("sssss",
-                $_POST["Uname"],
-                $_POST["Fname"],
+                $_POST["Username"],
+                $_POST["FullName"],
                 $_POST["email"],
                 $_POST["date_of_birth"],
                 $password_hash);
 
+<<<<<<< HEAD
 $stmt->execute()
+=======
+>>>>>>> b40201c8f6879c3d2bcf72e13850ab9b6ce28ceb
 
 if ($stmt->execute()) { 
     echo "PRAY IT WORKS";
