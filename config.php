@@ -40,12 +40,10 @@ $stmt->bind_param("sssss",
                 $_POST["date_of_birth"],
                 $password_hash);
 
-$stmt->execute()
-echo "pRAY";
 if ($stmt->execute()) { 
-    echo "PRAY IT WORKS";
+    header("Location: RegisterComplete.html");
 } else {
-    echo "fAILURE";
+    die($mysqli->error);
 }
 
 echo "please";
