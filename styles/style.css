@@ -11,6 +11,7 @@ body {
   border-radius: 10px;
   min-width: 800px;
   scroll-margin: 0;
+  position: relative;
   
 }
 
@@ -223,4 +224,20 @@ input[type="login"]:active{
 }
 .go:hover{
   background-color: grey;
+}
+
+.bottomR{
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+}
+.view {
+  float: left;
+}
+.blur{
+  background-color: white;
+  color: gray;
+  font-weight: 600;
+  display: block;
 }
