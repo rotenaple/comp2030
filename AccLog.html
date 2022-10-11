@@ -22,25 +22,25 @@
             <li><a class="menuBar active" href="AccMain.html">Login / Signup</a></li>
         </ul>
         <h2>Log-in</h2>
-        <form action="scripts/sellUsed_upload.php" method="post" enctype="multipart/form-data">
+        <form action="logon.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="column70">
                 <table>
                 <tr>
-                    <td>First Name</td>
-                    <td class="text-1"><input type="text" placeholder="Required" required></td>
+                    <td>Username</td>
+                    <td class="text-1"><input name="Username" type="text" placeholder="Required" required></td>
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td class="text-1"><input type="email" placeholder="Required" required></td>            
+                    <td class="text-1"><input name="email" type="email" placeholder="Required" required></td>            
                 </tr>
                 <tr>
                     <td>Password</td>
-                    <td class="text-1"><input type="text" placeholder="Required" required></td>
+                    <td class="text-1"><input name="password" type="password" placeholder="Required" required></td>
                 </tr>
                 </table>
                 <td><br><a href="Register.html">Don't Have an Account?</a></td>
-                    <td><input type="button" value="Log-in"></td>
+                    <td><input type="submit" name="logon" value="Log-in"></td>
             </div>
             
     </div>

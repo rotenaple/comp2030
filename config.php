@@ -47,4 +47,5 @@ if ($stmt->execute()) {
     echo "fAILURE";
 }
 
-echo "please";
+mysqli_close($conn);
+?>
