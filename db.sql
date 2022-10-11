@@ -9,7 +9,6 @@ CREATE TABLE user_form(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     UName varchar(255),
     FName varchar(255),
-    LName varchar(128),
     Password varchar(128),
     date_of_birth DATE,
     Email varchar(100)
