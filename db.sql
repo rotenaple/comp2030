@@ -7,8 +7,8 @@ USE Practical3;
 
 CREATE TABLE user_form(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    UName varchar(100),
     FName varchar(100),
-    LName varchar(100),
     Password varchar(100),
     Email varchar(100),
     Dob DATE().
