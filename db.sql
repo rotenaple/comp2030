@@ -11,6 +11,7 @@ CREATE TABLE user_form(
     FName varchar(255),
     LName varchar(128),
     Password varchar(128),
+    date_of_birth DATE,
     Email varchar(100)
 ) AUTO_INCREMENT = 1;
 
