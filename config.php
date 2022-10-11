@@ -24,7 +24,7 @@ $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "/ACCdatabase.php";
 
-$sql = "INSERT INTO user (Uname, Fname, email, date_of_birth, password)
+$sql = "INSERT INTO user_form (Uname, Fname, email, date_of_birth, password)
         VALUES (?, ?, ?, ?, ?)";
 
 $stmt = $mysqli->stmt_init();

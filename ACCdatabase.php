@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "user_db";
+$dbname = "Group2030";
 $username = "root";
 $password = "mysql";
 
