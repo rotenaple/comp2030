@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styleChat.css">
+    <meta charset="utf-8" />
+    <meta name="Group 2030" content="Group 2030" />
+    <meta name="description" content="SENIOR Chat" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!----<link rel="stylesheet" type="text/css" href="styles/style.css" /> -->
+    <title>SENIOR Chat</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to SENIOR</h1>
+      <ul class="bar">
+          <li><a class="menuBar" href="">Shop New</a></li>
+          <li><a class="menuBar" href="">Shop Used</a></li>
+          <li><a class="menuBar" href="">Sell</a></li>
+          <li><a class="menuBar active" href="">Messages</a></li>
+          <li><a class="menuBar barLast" href="">My Account</a></li>
+      </ul>
+
+      <h2> My Conversations </h2>
+
+      <div id="chatContainer">
+
+        <div id="chatLeftPanel">
+          <label id="label_chat" for="radio_chat"><img class="icon" src="img/icons/chat.svg" height="30"><br> Chat</label>
+          <label id="label_contacts" for="radio_contacts"><img class="icon" src="img/icons/contacts.svg" height="30"><br> Contacts</label>
+          <label id="label_settings" for="radio_settings"><img class="icon" src="img/icons/settings.svg" height="30"><br> Settings</label>
+        </div>
+        
+        <div id="chatCentrePanel">  
+        </div>
+
+        <input class="hidden" type=radio id="radio_chat" name="radio1">
+        <input class="hidden" type=radio id="radio_contacts" name="radio1">
+        <input class="hidden" type=radio id="radio_settings" name="radio1">
+
+        <div id="chatRightPanel">
+        </div>
+      </div>
+
+    </div>  
+  </body> 
+</html>
