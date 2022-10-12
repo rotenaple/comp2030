@@ -30,6 +30,7 @@ CREATE TABLE ItemU(
     Name varchar(100),
     Cost int,
     Ship int,
+    Amount int,
     Category varchar(100),
     itemCon varchar(100),
     Description text
