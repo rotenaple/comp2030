@@ -1,226 +1,43 @@
-
-body {
-  margin: 0px 5%;
-  background-color: rgb(208, 236, 246);
-  overflow-x: scroll;
-}
-
-.container{
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  min-width: 800px;
-  scroll-margin: 0;
-  
-}
-
-h1 {
-    font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-    font-size: 36pt;
-    font-weight: 700;
-    color: #428bcb;
-    margin: 5px 0;
-}
-
-h2 {
-    font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-    font-size: 28pt;
-    font-weight: 700;
-    color: #000;
-    margin: 8pt 0;
-}
-
-h3 {
-    font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-    font-size: 28pt;
-    font-weight: 400;
-    color: #000;
-}
-
-p{
-    font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-    font-size: 14pt;
-    font-weight: 400;
-    color: #000;
-}
-
-.defaultText{
-    font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-    font-size: 14pt;
-    font-weight: 400;
-    color: #000;
-}
-
-input, textarea, select{
-    font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-    font-size: 14pt;
-    font-weight: 400;
-    color: #000;
-    padding: 5px;
-    margin: 10px 0;
-    border-radius: 6px;
-    border: 2px #888;
-    border-style: solid;
-    background-color: white;
-}
-
-input[type="submit"]{
-  background-color: rgb(255, 213, 0);
-  font-weight: 600;
-  display: block;
-}
-
-input[type="submit"]:hover{
-  background-color: rgb(237, 197, 0);
-}
-
-input[type="submit"]:active{
-  background-color: rgb(218, 181, 0);
-}
-
-
-input[type="button"]{
-  border: #428bcb;
-  border-style: solid;
-  color: #428bcb;
-  display: block;
-}
-
-input[type="button"]:hover{
-  background-color: #eee;
-}
-
-input[type="button"]:active{
-background-color: #ddd;
-}
-
-select{
-  min-width: 135px;
-}
-
-input{
-  /*width: 10%;*/
-}
-
-textarea{
-  width: 85%;
-}
-
-td[class="text-1"] input{
-  width: 85%;
-}
-
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; 
-}
-
-li {
-  float: left;
-  width: 20%;
-}
-
-div{
-    font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-  font-size: 14pt;
-  font-weight: 400;
-}
-
-.menuBar {
-  display: block;
-  color: #428bcb;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  background-color: #FFF;
-  border: 2px #428bcb;
-  border-style: solid;
-  border-radius: 12px;
-  margin-right: 48px;
-  font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-  font-size: 14pt;
-  font-weight: 600;
-}
-
-.barLast{
-  margin-right: 0px;
-}
-
-.active {
-    color: #FFF;
-    background-color: #428bcb;
-    font-weight: 700;
-}
-
-.menuBar:hover:not(.active) {
-    background-color: #DDD;
-    border-color: #286192;
-    color: #286192;
-  }
-
-  .active:hover{
-    background-color: #286192;
-    border-color: #286192;
-  }
-
-  .row {
+.searchBar{
     display: flex;
-  }
-
-  .column70 {
-    flex: 70%;
-    margin-right: 10px;
-  }
-
-  .column30 {
-    flex: 30%;
-  }
-
-  td{
-      text-align: left;
-      padding-right: 24px;
-  }
-
-  td[type="text-1"]{
-      flex: auto;
+    margin: 20px 0;
 }
 
-  .imageBox{
-      float: left;
-      padding: 0;
-      display: grid;
-    }
-
-.imgFit{
-    min-width: 256px;
-    max-width: 100%;
-    max-height: 100vh;
-    margin-bottom: 16px;
+.searchBar > *{
+    height: 100%;
+    padding: 5px;
+    margin: auto;
 }
 
-input[type="login"]{
-  background-color: #428bcb;
-  font-weight: 600;
-  display: block;
-  width: 4%;
-}
-input[type="login"]:hover{
-  background-color: #2f6ba0;
+.searchBox{
+    flex: 1;
+    margin: 0 20px;
 }
 
-input[type="login"]:active{
-  background-color: #2f6ba0;
+.flexParent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px -10px;
 }
-.searchBar {
-  width: 1000px;
+
+.flexChild{
+    display: block;
+    flex: 1;
+    text-align: center;
+    background-color: #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
 }
-.go{
-  font-weight: 600;
-  display: block;
-  width: 50px;
+
+.flexChild:hover{
+    background-color: #bbb;
 }
-.go:hover{
-  background-color: grey;
+
+.flexChild img{
+    margin: 10px;
+    width: 200px;
 }

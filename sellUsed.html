@@ -21,19 +21,19 @@
             <li><a class="menuBar barLast" href="AccMain.html">My Account</a></li>
         </ul>
         <h2>Create New Item Listing</h2>
-        <form action="scripts/sellUsed_upload.php" method="post" enctype="multipart/form-data">
+        <form action="php/sellUsedconfig.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="column70">
                 <table>
                 <tr>
                     <td>Item Name</td>
-                    <td class="text-1"><input type="text" placeholder="Required" required></td>
+                    <td class="text-1"><input type="text" name="name" placeholder="Required" required></td>
                     <td>Quantities Available</td>
-                    <td class="text-1"><input type="number" value="1" min="1" max="20" required></td>
+                    <td class="text-1"><input type="number" name="amount" value="1" min="1" max="20" required></td>
                 </tr>
                 <tr>
                     <td>Price</td>
-                    <td class="text-1"><input type="number" placeholder="Required" min="1" max="9999" required></td>
+                    <td class="text-1"><input type="number" name="price" placeholder="Required" min="1" max="9999" required></td>
                     <td>Item Condition</td>
                     <td class="text-1"> 
                         <select name="isUsed" id="isUsed" required>
@@ -45,7 +45,7 @@
                 </tr>
                 <tr>
                     <td>Shipping Fee</td>
-                    <td class="text-1"><input type="number" placeholder="Required" min="0" max="9999" required></td>
+                    <td class="text-1"><input type="number" name="ship" placeholder="Required" min="0" max="9999" required></td>
                     <td>Category</td>
                     <td class="text-1"> 
                         <select name="productCat" id="productCat">
@@ -61,8 +61,8 @@
                     <td>Description</td>
                 </tr>
                 </table>
-                <textarea placeholder="Required" rows="6" required></textarea>
-                <input type="submit" value="Create Listing">
+                <textarea placeholder="Required" name="description" rows="6" required></textarea>
+                <input type="submit" name="create" value="Create Listing">
             </div>
             <div class="column30">
                 <div class="imageBox">
