@@ -24,7 +24,6 @@ CREATE TABLE ItemN(
     Description text
 ) AUTO_INCREMENT = 1;
 
-
 CREATE TABLE ItemU(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Name varchar(100),
@@ -34,6 +33,8 @@ CREATE TABLE ItemU(
     itemCon varchar(100),
     Description text
 ) AUTO_INCREMENT = 1;
+
+
 
 
 CREATE user IF NOT EXISTS dbadmin@localhost;

@@ -26,6 +26,25 @@
       <p class="kn">Shipping Somewhere Else?</p>
       <input class="blurs" type="submit" value="Ship To Another Address" />
       <h2><b>Payment Method</b></h2>
+      <h3><b>Credit Card</b></h3>
+      <table>
+        <tr>
+          <td>First Name</td>
+          <td class="text-1"><input name="Fname" type="text" placeholder="Required" required></td>
+          <td>Last Name</td>
+          <td class="text-1"><input name="Lname" type="text" placeholder="Required" required></td>
+        </tr>
+        <tr>
+          <td>Card Number</td>
+          <td class="text-1"><input name="cnum" type="text" maxlength="16" size="16" placeholder="Required" required></td>
+          <td>CVV</td>
+          <td class="text-1"><input name="cvv" type="text" maxlength="3" size="3" placeholder="NNN" required></td>
+        </tr>
+        <tr>
+          <td>Expiry Date</td>
+          <td class="text-1"><input name="edate" type="month" placeholder="Required" required></td>
+        </tr>
+      </table>
       <div class="bottomR">
         <input class="bleh" type="submit" value="Place Order" />
       </div>
