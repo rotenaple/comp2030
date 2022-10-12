@@ -1,5 +1,5 @@
 <?php
-
+if (isset($_POST["logon"])) {
 require_once "ACCdatabase.php";
 
 $sql = "INSERT INTO user_form (Name, Cost, Ship, Amount, Category, itemCon, Description)
@@ -27,4 +27,5 @@ if ($stmt->execute()) {
 }
 
 mysqli_close($conn);
+}
 ?>
