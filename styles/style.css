@@ -99,10 +99,6 @@ select{
   min-width: 135px;
 }
 
-input{
-  /*width: 10%;*/
-}
-
 textarea{
   width: 85%;
 }
@@ -214,17 +210,6 @@ input[type="login"]:hover{
 input[type="login"]:active{
   background-color: #2f6ba0;
 }
-.searchBar {
-  width: 1000px;
-}
-.go{
-  font-weight: 600;
-  display: block;
-  width: 50px;
-}
-.go:hover{
-  background-color: grey;
-}
 
 .bottomR{
   position: absolute;
@@ -234,10 +219,4 @@ input[type="login"]:active{
 }
 .view {
   float: left;
-}
-.blur{
-  background-color: white;
-  color: gray;
-  font-weight: 600;
-  display: block;
 }
