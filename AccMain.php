@@ -1,3 +1,12 @@
+<?php 
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You have to log in";
+    header("Location: AccLog.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,17 +30,17 @@
             <li><a class="menuBar" href="">About Us</a></li>
             <li><a class="menuBar active" href="myAccount.html">My Account</a></li>
         </ul>
-
+     <?php if (isset($_SESSION['success'])) : ?>
             <h2 id="ACCINFO">Your Account Infomation</h2>
 
         <div>
             <img id="ACCIMG" src="file">
             <input type="button" id="ACC-UPLDIMG" value="Upload Image">
         </div>
-
+        <form action="Accupdate.php" method="post" enctype="multipart/form-data">
         <tr>
             <td>Update Username</td>
-            <td class="text-2"><input name="Uname" type="text" placeholder="Required"></td>
+            <td class="text-2"><input name="Username" type="text" placeholder="Required"></td>
         </tr>
         <br>
         <tr>
@@ -41,10 +50,14 @@
         <br>
         <tr>
             <td>Update Password</td>
-            <td class="text-2"><input name="Password" type="text" placeholder="Required"></td>
+            <td class="text-2"><input name="Password" type="password" placeholder="Required"></td>
         </tr>
         <br>
         <td>
             <td><input type="submit" name="update" value="Update"></td>
         </tr>
+     </form>
+     <?php endif ?>
+    </body>
+</html>
 
