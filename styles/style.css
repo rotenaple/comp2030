@@ -235,9 +235,3 @@ input[type="login"]:active{
 .view {
   float: left;
 }
-.blur{
-  background-color: white;
-  color: gray;
-  font-weight: 600;
-  display: block;
-}
