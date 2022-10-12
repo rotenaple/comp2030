@@ -24,7 +24,7 @@ $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 require_once "ACCdatabase.php";
 
-$sql = "INSERT INTO user_form (FName, LName, Email, Dob, password)
+$sql = "INSERT INTO user_form (UName, FName, Email, date_of_birth, password)
         VALUES (?, ?, ?, ?, ?)";
 
 $stmt = mysqli_stmt_init($conn);
@@ -34,16 +34,12 @@ if( ! $stmt->prepare($sql) ) {
 }
 
 $stmt->bind_param("sssss",
-                $_POST["Username"],
-                $_POST["FullName"],
+                $_POST["Uname"],
+                $_POST["Fname"],
                 $_POST["email"],
                 $_POST["date_of_birth"],
                 $password_hash);
 
-<<<<<<< HEAD
-$stmt->execute()
-=======
->>>>>>> b40201c8f6879c3d2bcf72e13850ab9b6ce28ceb
 
 if ($stmt->execute()) { 
     header("Location: RegisterComplete.html");
