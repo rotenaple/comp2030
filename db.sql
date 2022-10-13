@@ -16,7 +16,7 @@ CREATE TABLE user_form(
 
 CREATE TABLE ItemN(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Name varchar(100),
+    PName varchar(100),
     Cost int,
     Ship int,
     Amount int,
@@ -27,7 +27,7 @@ CREATE TABLE ItemN(
 
 CREATE TABLE ItemU(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Name varchar(100),
+    PName varchar(100),
     Cost int,
     Ship int,
     Amount int,
@@ -35,6 +35,21 @@ CREATE TABLE ItemU(
     itemCon varchar(100),
     Description text
 ) AUTO_INCREMENT = 1;
+
+CREATE TABLE user_cart(
+    cart_id NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    PName varchar(100),
+    Cost int,
+    Ship int,
+    Quantity int, 
+    UName varchar(255) FOREIGN KEY REFERENCES user_form(UName)
+)
+CREATE TABLE paid(
+    transact_id NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Total int,
+    ccnum varchar(100),
+    UName varchar(255) FOREIGN KEY REFERENCES user_form(UName)
+)
 
 
 

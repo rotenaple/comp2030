@@ -18,14 +18,15 @@ if (isset($_POST["update"])) {
         die("Password must contain at least one number");
     } 
 
-    $password_hash = password_hash($_POST["Password"], PASSWORD_DEFAULT);
-
+    
     require_once "ACCdatabase.php";
     $tbcuser = $_SESSION['username'];
 
-    $currentuser = $_POST["Username"];
-    $currentemail = $_POST["Email"] ;
+    $currentuser = mysqli_real_escape_string($conn, $_POST["Username"]);
+    $currentemail = mysqli_real_escape_string($conn, $_POST["Email"] );
+    $pass = mysqli_real_escape_string($conn, $_POST["password"]);
     
+    $password_hash = password_hash($pass, PASSWORD_DEFAULT);
     
     $sql = "UPDATE user_form SET UName = '$currentuser', 
     Email = '$currentemail', Password = '$password_hash' WHERE UName = '$tbcuser'; ";
