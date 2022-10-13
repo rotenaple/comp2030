@@ -25,8 +25,9 @@
       <p>Some Random address</p>
       <p class="kn">Shipping Somewhere Else?</p>
       <input class="blurs" type="submit" value="Ship To Another Address" />
-      <h2><b>Payment Method</b></h2>
-      <h3><b>Credit Card</b></h3>
+      <h2><b>Payment</b></h2>
+      <h3><b>Card Details</b></h3>
+      <form action="action" method="post" enctype="multipart/form-data">
       <table>
         <tr>
           <td>First Name</td>
@@ -36,9 +37,9 @@
         </tr>
         <tr>
           <td>Card Number</td>
-          <td class="text-1"><input name="cnum" type="text" maxlength="16" size="16" placeholder="Required" required></td>
+          <td class="text-1"><input name="cnum" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="16" size="16" placeholder="Required" required></td>
           <td>CVV</td>
-          <td class="text-1"><input name="cvv" type="text" maxlength="3" size="3" placeholder="NNN" required></td>
+          <td class="text-1"><input name="cvv" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="3" size="3" placeholder="NNN" required></td>
         </tr>
         <tr>
           <td>Expiry Date</td>
@@ -46,8 +47,9 @@
         </tr>
       </table>
       <div class="bottomR">
-        <input class="bleh" type="submit" value="Place Order" />
+        <input type="submit" value="Place Order" />
       </div>
     </div>  
+  </form>
   </body>
 </html>
