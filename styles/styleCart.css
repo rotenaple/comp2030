@@ -4,13 +4,12 @@
 }
 
 .itemPhoto {
-    flex: 1;
     margin-right: 30px;
     margin-bottom: 20px;
 }
 
 .itemDetail {
-    flex: 2;
+    flex: 1;
 }
 
 .productName {
