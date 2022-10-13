@@ -7,6 +7,7 @@ body {
 
 .container{
   padding: 20px;
+  margin-bottom: 20px;
   background-color: white;
   border-radius: 10px;
   min-width: 800px;
@@ -78,7 +79,6 @@ input[type="submit"]:hover{
 input[type="submit"]:active{
   background-color: rgb(218, 181, 0);
 }
-
 
 input[type="button"]{
   border: #428bcb;
