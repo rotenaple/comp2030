@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="author" content="COMP2030 Group1" />
     <meta name="description" content="My Account" />
@@ -10,8 +11,9 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <script src="Scripts/Select.js" defer></script>
     <title>My Account</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
         <h1>Welcome to SENIOR</h1>
         <ul class="bar">
@@ -23,27 +25,28 @@
         </ul>
         <h2>Log-in</h2>
         <form action="logon.php" method="post" enctype="multipart/form-data">
-        <div class="row">
-            <div class="column70">
-                <table>
-                <tr>
-                    <td>Username</td>
-                    <td class="text-1"><input name="Username" type="text" placeholder="Required" required></td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td class="text-1"><input name="email" type="email" placeholder="Required" required></td>            
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td class="text-1"><input name="password" type="password" placeholder="Required" required></td>
-                </tr>
-                </table>
-                <td><br><a href="Register.html">Don't Have an Account?</a></td>
-                    <td><input type="submit" name="logon" value="Log-in"></td>
+            <div class="row">
+                <div class="column70">
+                    <table>
+                        <tr>
+                            <td>Username</td>
+                            <td class="text-1"><input name="Username" type="text" placeholder="Required" required></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td class="text-1"><input name="email" type="email" placeholder="Required" required></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td class="text-1"><input name="password" type="password" placeholder="Required" required></td>
+                        </tr>
+                    </table>
+                    <td><br><a href="Register.html">Don't Have an Account?</a></td>
+                    <td><input class="submit" type="submit" name="logon" value="Log-in"></td>
+                </div>
+
             </div>
-            
-    </div>
-</form>
-  </body>
+        </form>
+</body>
+
 </html>

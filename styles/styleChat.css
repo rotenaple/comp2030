@@ -1,54 +1,53 @@
-#chatContainer{
-  display: flex;
-  min-height: 500px;
-  width: auto;
+#chatContainer {
+    display: flex;
+    min-height: 500px;
+    width: auto;
 }
 
-
-#chatLeftPanel{
-  padding-right: 10px;
-  width: 12%;
-  max-width: 200;
+#chatLeftPanel {
+    padding-right: 10px;
+    width: 12%;
+    max-width: 200;
 }
 
-#chatLeftPanel label{
-  display: block;
-text-align: center;
-background-color: #ddd;
-padding: 10px;
-border-radius: 10px;
-margin-bottom: 10px;
+#chatLeftPanel label {
+    display: block;
+    text-align: center;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-#chatLeftPanel label:hover{
-background-color: #ccc;
+#chatLeftPanel label:hover {
+    background-color: #ccc;
 }
 
-#chatCentrePanel{
-  padding: 10px;
-  background-color: #ddd;
-  border-radius: 10px;
-  flex: 2;
+#chatCentrePanel {
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    flex: 2;
 }
 
-#chatRightPanel{
-  padding: 10px;
-  margin-left: 10px;
-  background-color: #ddd;
-  border-radius: 10px;
-  flex: 7;
+#chatRightPanel {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    flex: 7;
 }
 
-#radio_contacts:checked ~ #chatRightPanel{
-  flex:0;
-  display: none;
+#radio_contacts:checked~#chatRightPanel {
+    flex: 0;
+    display: none;
 }
 
-#radio_settings:checked ~ #chatRightPanel{
-  flex:0;
-  display: none;
+#radio_settings:checked~#chatRightPanel {
+    flex: 0;
+    display: none;
 }
 
-.hidden{
-  display: none;
+.hidden {
+    display: none;
 }

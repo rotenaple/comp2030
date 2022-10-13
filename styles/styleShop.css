@@ -1,27 +1,27 @@
-.searchBar{
+.searchBar {
     display: flex;
     margin: 20px 0;
 }
 
-.searchBar > *{
+.searchBar>* {
     height: 100%;
     padding: 5px;
     margin: auto;
 }
 
-.searchBox{
+.searchBox {
     flex: 1;
     margin: 0 20px;
 }
 
-.flexParent{
+.flexParent {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 10px -10px;
 }
 
-.flexChild{
+.flexChild {
     display: block;
     flex: 1;
     text-align: center;
@@ -33,27 +33,26 @@
     text-decoration: none;
 }
 
-.flexChild:hover{
+.flexChild:hover {
     background-color: #bbb;
 }
 
-.flexChild img{
+.flexChild img {
     margin: 10px;
     width: 200px;
 }
 
-.bottomBar{
+.bottomBar {
     position: fixed;
     right: calc(5% + 20px);
     bottom: 25px;
-    
 }
 
-.bottomSpacer{
+.bottomSpacer {
     height: 55px;
 }
 
-.toCart{
+.toCart {
     background-color: rgb(255, 213, 0);
     font-weight: 600;
     font-size: 18pt;
@@ -61,19 +60,21 @@
     padding: 10px 20px;
     margin: 10px 0;
     border-radius: 6px;
-    border: 3px #000;
+    border: 2.5px #000;
     border-style: solid;
     text-decoration: none;
     display: flex;
     align-items: center;
-  }
-  
-  .toCart:hover{
-    background-color: rgb(237, 197, 0);
-  }
-  
-  .toCart:active{
-    background-color: rgb(218, 181, 0);
-  }
+}
 
-  .icon{padding: 5px;}
+.toCart:hover {
+    background-color: rgb(237, 197, 0);
+}
+
+.toCart:active {
+    background-color: rgb(218, 181, 0);
+}
+
+.icon {
+    padding: 5px;
+}

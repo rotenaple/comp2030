@@ -1,19 +1,17 @@
-
 body {
-  margin: 0px 5%;
-  background-color: rgb(208, 236, 246);
-  overflow-x: scroll;
+    margin: 0px 5%;
+    background-color: rgb(208, 236, 246);
+    overflow-x: scroll;
 }
 
-.container{
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: white;
-  border-radius: 10px;
-  min-width: 800px;
-  scroll-margin: 0;
-  position: relative;
-  
+.container {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    min-width: 800px;
+    scroll-margin: 0;
+    position: relative;
 }
 
 h1 {
@@ -39,21 +37,23 @@ h3 {
     color: #000;
 }
 
-p{
+p {
     font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
     font-size: 14pt;
     font-weight: 400;
     color: #000;
 }
 
-.defaultText{
+.defaultText {
     font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
     font-size: 14pt;
     font-weight: 400;
     color: #000;
 }
 
-input, textarea, select{
+input,
+textarea,
+select {
     font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
     font-size: 14pt;
     font-weight: 400;
@@ -66,83 +66,85 @@ input, textarea, select{
     background-color: white;
 }
 
-input[type="submit"]{
-  background-color: rgb(255, 213, 0);
-  font-weight: 600;
-  display: block;
+input[class="submit"] {
+    background-color: rgb(255, 213, 0);
+    font-weight: 600;
+    border: 2.5px #000;
+    border-style: solid;
+    display: block;
 }
 
-input[type="submit"]:hover{
-  background-color: rgb(237, 197, 0);
+input[class="submit"]:hover {
+    background-color: rgb(237, 197, 0);
 }
 
-input[type="submit"]:active{
-  background-color: rgb(218, 181, 0);
+input[class="submit"]:active {
+    background-color: rgb(218, 181, 0);
 }
 
-input[type="button"]{
-  border: #428bcb;
-  border-style: solid;
-  color: #428bcb;
-  display: block;
+input[type="button"] {
+    border: #428bcb;
+    border-style: solid;
+    color: #428bcb;
+    display: block;
 }
 
-input[type="button"]:hover{
-  background-color: #eee;
+input[type="button"]:hover {
+    background-color: #eee;
 }
 
-input[type="button"]:active{
-background-color: #ddd;
+input[type="button"]:active {
+    background-color: #ddd;
 }
 
-select{
-  min-width: 135px;
+select {
+    min-width: 135px;
 }
 
-textarea{
-  width: 85%;
+textarea {
+    width: 85%;
 }
 
-td[class="text-1"] input{
-  width: 85%;
+td[class="text-1"] input {
+    width: 85%;
 }
 
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 li {
-  float: left;
-  width: 20%;
+    float: left;
+    width: 20%;
 }
 
-div{
+div {
     font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-  font-size: 14pt;
-  font-weight: 400;
+    font-size: 14pt;
+    font-weight: 400;
 }
 
 .menuBar {
-  display: block;
-  color: #428bcb;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  background-color: #FFF;
-  border: 2px #428bcb;
-  border-style: solid;
-  border-radius: 12px;
-  margin-right: 48px;
-  font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
-  font-size: 14pt;
-  font-weight: 600;
+    display: block;
+    color: #428bcb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #FFF;
+    border: 2px #428bcb;
+    border-style: solid;
+    border-radius: 12px;
+    margin-right: 48px;
+    font-family: "Source Sans Pro", "Gill Sans MT", "Gill Sans", sans-serif;
+    font-size: 14pt;
+    font-weight: 600;
 }
 
-.barLast{
-  margin-right: 0px;
+.barLast {
+    margin-right: 0px;
 }
 
 .active {
@@ -155,73 +157,59 @@ div{
     background-color: #DDD;
     border-color: #286192;
     color: #286192;
-  }
-
-  .active:hover{
-    background-color: #286192;
-    border-color: #286192;
-  }
-
-  .row {
-    display: flex;
-  }
-
-  .column70 {
-    flex: 70%;
-    margin-right: 10px;
-  }
-
-  .column30 {
-    flex: 30%;
-  }
-
-  td{
-      text-align: left;
-      padding-right: 24px;
-  }
-
-  td[type="text-1"]{
-      flex: auto;
 }
 
-  .imageBox{
-      float: left;
-      padding: 0;
-      display: grid;
-    }
+.active:hover {
+    background-color: #286192;
+    border-color: #286192;
+}
 
-.imgFit{
+.row {
+    display: flex;
+}
+
+.column70 {
+    flex: 70%;
+    margin-right: 10px;
+}
+
+.column30 {
+    flex: 30%;
+}
+
+td {
+    text-align: left;
+    padding-right: 24px;
+}
+
+td[type="text-1"] {
+    flex: auto;
+}
+
+.imageBox {
+    float: left;
+    padding: 0;
+    display: grid;
+}
+
+.imgFit {
     min-width: 256px;
     max-width: 100%;
     max-height: 100vh;
     margin-bottom: 16px;
 }
 
-input[type="login"]{
-  background-color: #428bcb;
-  font-weight: 600;
-  display: block;
-  width: 4%;
-}
-input[type="login"]:hover{
-  background-color: #2f6ba0;
+input[type="login"] {
+    background-color: #428bcb;
+    font-weight: 600;
+    display: block;
+    width: 4%;
 }
 
-input[type="login"]:active{
-  background-color: #2f6ba0;
+input[type="login"]:hover {
+    background-color: #2f6ba0;
 }
 
-.bottomR{
-  position: absolute;
-  padding: 10px;
-  bottom: 0;
-  right: 0;
-}
-.view {
-  float: left;
-}
-.cardlogo{
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 30px;
+input[type="login"]:active {
+    background-color: #2f6ba0;
 }

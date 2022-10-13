@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="author" content="COMP2030 Group1" />
     <meta name="description" content="Sell Used" />
@@ -9,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <title>Sell Used</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
         <h1>Welcome to SENIOR</h1>
         <ul class="bar">
@@ -22,33 +24,33 @@
         </ul>
         <h2>Create New Item Listing</h2>
         <form action="sellUsedconfig.php" method="post" enctype="multipart/form-data">
-        <div class="row">
-            <div class="column70">
-                <table>
-                <tr>
-                    <td>Item Name</td>
-                    <td class="text-1"><input type="text" name="name" placeholder="Required" required></td>
-                    <td>Quantities Available</td>
-                    <td class="text-1"><input type="number" name="amount" value="1" min="1" max="20" required></td>
-                </tr>
-                <tr>
-                    <td>Price</td>
-                    <td class="text-1"><input type="number" name="price" placeholder="Required" min="1" max="9999" required></td>
-                    <td>Item Condition</td>
-                    <td class="text-1"> 
-                        <select name="isUsed" id="isUsed" required>
+            <div class="row">
+                <div class="column70">
+                    <table>
+                        <tr>
+                            <td>Item Name</td>
+                            <td class="text-1"><input type="text" name="name" placeholder="Required" required></td>
+                            <td>Quantities Available</td>
+                            <td class="text-1"><input type="number" name="amount" value="1" min="1" max="20" required></td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td class="text-1"><input type="number" name="price" placeholder="Required" min="1" max="9999" required></td>
+                            <td>Item Condition</td>
+                            <td class="text-1">
+                                <select name="isUsed" id="isUsed" required>
                         <option selected disabled hidden>Select</option>
                         <option value="New">New</option>
                         <option value="Used">Used</option>
                       </select></td>
-                    
-                </tr>
-                <tr>
-                    <td>Shipping Fee</td>
-                    <td class="text-1"><input type="number" name="ship" placeholder="Required" min="0" max="9999" required></td>
-                    <td>Category</td>
-                    <td class="text-1"> 
-                        <select name="productCat" id="productCat">
+
+                        </tr>
+                        <tr>
+                            <td>Shipping Fee</td>
+                            <td class="text-1"><input type="number" name="ship" placeholder="Required" min="0" max="9999" required></td>
+                            <td>Category</td>
+                            <td class="text-1">
+                                <select name="productCat" id="productCat">
                         <option selected disabled hidden>Select</option>
                         <option value="Outdoors">Outdoors</option>
                         <option value="Indoors">Indoors</option>
@@ -56,23 +58,23 @@
                         <option value="Fishing">Fishing</option>
                         <option value="Boating">Boating</option>
                       </select></td>
-                </tr>
-                <tr>
-                    <td>Description</td>
-                </tr>
-                </table>
-                <textarea placeholder="Required" name="description" rows="6" required></textarea>
-                <input type="submit" name="create" value="Create Listing">
-            </div>
-            <div class="column30">
-                <div class="imageBox">
-                    <img class="imgFit" src="img/placeholder.png">
-                    <img class="imgFit" src="img/placeholder.png">
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                        </tr>
+                    </table>
+                    <textarea placeholder="Required" name="description" rows="6" required></textarea>
+                    <input class="submit" type="submit" name="create" value="Create Listing">
                 </div>
-                <input type="button" value="Upload Product Image">
-                <input type="file" name="my_file[]" multiple id="fileToUpload[]">
+                <div class="column30">
+                    <div class="imageBox">
+                        <img class="imgFit" src="img/placeholder.png">
+                        <img class="imgFit" src="img/placeholder.png">
+                    </div>
+                    <input type="file" name="my_file[]" multiple id="fileToUpload[]">
+                </div>
             </div>
-    </div>
-</form>
-  </body>
+        </form>
+</body>
+
 </html>

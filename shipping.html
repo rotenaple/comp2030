@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="utf-8" />
     <meta name="author" content="Group" />
@@ -11,52 +12,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <!----<link rel="stylesheet" type="text/css" href="styles/style.css" /> -->
     <title>Payment</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <h1>Welcome to SENIOR</h1>
-      <ul class="bar">
-          <li><a class="menuBar" href="">Shop New</a></li>
-          <li><a class="menuBar" href="">Shop Used</a></li>
-          <li><a class="menuBar" href="">Sell</a></li>
-          <li><a class="menuBar" href="">About Us</a></li>
-          <li><a class="menuBar active barLast" href="">My Account</a></li>
-      </ul>
-      <h2><b>Payment</b></h2>
-      <h3><b>Card Details</b></h3>
-      <label>Accepted Cards</label>
-      <div class="cardlogo">
-        <i class="fa fa-cc-visa" style="color:navy ;"></i>
-        <i class="fa fa-cc-mastercard" style="color:red ;"></i>
-        <i class="fa fa-cc-amex" style="color:blue ;"></i>
-      </div>
-      <form action="action" method="post" enctype="multipart/form-data">
-      <table>
-        <tr>
-          <td>First Name</td>
-          <td class="text-1"><input name="Fname" type="text" placeholder="Required" required></td>
-          <td>Last Name</td>
-          <td class="text-1"><input name="Lname" type="text" placeholder="Required" required></td>
-        </tr>
-        <tr>
-          <td>Card Number</td>
-          <td class="text-1"><input name="cnum" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="16" size="16" placeholder="Required" required></td>
-          <td>CVV</td>
-          <td class="text-1"><input name="cvv" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="3" size="3" placeholder="NNN" required></td>
-        </tr>
-        <tr>
-          <td>Expiry Date</td>
-          <td class="text-1"><input name="edate" type="month" placeholder="Required" required></td>
-        </tr>
-      </table>
-      <h3><b>Shipping Address</b></h3>
-      <p>Some Random address</p>
-      <p class="kn">Shipping Somewhere Else?</p>
-      <input type="submit" value="Ship To Another Address" />
-      <div class="bottomR">
-        <input type="submit" value="Place Order" />
-      </div>
-    </div>  
-  </form>
-  </body>
+        <h1>Welcome to SENIOR</h1>
+        <ul class="bar">
+            <li><a class="menuBar" href="">Shop New</a></li>
+            <li><a class="menuBar" href="">Shop Used</a></li>
+            <li><a class="menuBar" href="">Sell</a></li>
+            <li><a class="menuBar" href="">About Us</a></li>
+            <li><a class="menuBar active barLast" href="">My Account</a></li>
+        </ul>
+        <h2><b>Payment</b></h2>
+        <h3><b>Card Details</b></h3>
+        <label>Accepted Cards</label>
+        <div class="cardlogo">
+            <i class="fa fa-cc-visa" style="color:navy ;"></i>
+            <i class="fa fa-cc-mastercard" style="color:red ;"></i>
+            <i class="fa fa-cc-amex" style="color:blue ;"></i>
+        </div>
+        <form action="action" method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td class="text-1"><input name="Fname" type="text" placeholder="Required" required></td>
+                    <td>Last Name</td>
+                    <td class="text-1"><input name="Lname" type="text" placeholder="Required" required></td>
+                </tr>
+                <tr>
+                    <td>Card Number</td>
+                    <td class="text-1"><input name="cnum" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="16" size="16" placeholder="Required" required></td>
+                    <td>CVV</td>
+                    <td class="text-1"><input name="cvv" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="3" size="3" placeholder="NNN" required></td>
+                </tr>
+                <tr>
+                    <td>Expiry Date</td>
+                    <td class="text-1"><input name="edate" type="month" placeholder="Required" required></td>
+                </tr>
+            </table>
+            <h3><b>Shipping Address</b></h3>
+            <p>Some Random address</p>
+            <p class="kn">Shipping Somewhere Else?</p>
+            <input type="submit" value="Ship To Another Address" />
+            <div class="bottomR">
+                <input class="submit" type="submit" value="Place Order" />
+            </div>
+    </div>
+    </form>
+</body>
+
 </html>
