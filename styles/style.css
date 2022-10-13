@@ -220,3 +220,8 @@ input[type="login"]:active{
 .view {
   float: left;
 }
+.cardlogo{
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 30px;
+}

@@ -7,9 +7,10 @@
     <meta name="description" content="Shipping" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <!----<link rel="stylesheet" type="text/css" href="styles/style.css" /> -->
-    <title>Shipping</title>
+    <title>Payment</title>
   </head>
   <body>
     <div class="container">
@@ -21,12 +22,14 @@
           <li><a class="menuBar" href="">About Us</a></li>
           <li><a class="menuBar active barLast" href="">My Account</a></li>
       </ul>
-      <h2><b>Shipping Address</b></h2>
-      <p>Some Random address</p>
-      <p class="kn">Shipping Somewhere Else?</p>
-      <input class="blurs" type="submit" value="Ship To Another Address" />
       <h2><b>Payment</b></h2>
       <h3><b>Card Details</b></h3>
+      <label>Accepted Cards</label>
+      <div class="cardlogo">
+        <i class="fa fa-cc-visa" style="color:navy ;"></i>
+        <i class="fa fa-cc-mastercard" style="color:red ;"></i>
+        <i class="fa fa-cc-amex" style="color:blue ;"></i>
+      </div>
       <form action="action" method="post" enctype="multipart/form-data">
       <table>
         <tr>
@@ -46,6 +49,10 @@
           <td class="text-1"><input name="edate" type="month" placeholder="Required" required></td>
         </tr>
       </table>
+      <h3><b>Shipping Address</b></h3>
+      <p>Some Random address</p>
+      <p class="kn">Shipping Somewhere Else?</p>
+      <input type="submit" value="Ship To Another Address" />
       <div class="bottomR">
         <input type="submit" value="Place Order" />
       </div>
