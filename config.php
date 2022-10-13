@@ -22,7 +22,7 @@ if (isset($_POST["Submit"])){
     if ($_POST["password"] !== $_POST["cpassword"]) {
         die("Passwords must match");
     }
-    
+
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
     
     $sql = "INSERT INTO user_form (UName, FName, Email, date_of_birth, password)
@@ -35,16 +35,16 @@ if (isset($_POST["Submit"])){
     }
     
     $stmt->bind_param("sssss",
-                    $_POST["Uname"],
-                    $_POST["Fname"],
-                    $_POST["email"],
-                    $_POST["date_of_birth"],
+                    htmlspecialchars($_POST["Uname"]),
+                    htmlspecialchars($_POST["Fname"]),
+                    htmlspecialchars($_POST["email"]),
+                    htmlspecialchars($_POST["date_of_birth"]),
                     $password_hash);
     
     if ($stmt->execute()) { 
         header("Location: RegisterComplete.html");
     } else {
-        die($mysqli->error);
+        die($conn->error);
     }
 }
 
