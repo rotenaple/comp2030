@@ -1,11 +1,16 @@
-.cartItem {
+.cartItem,
+.buttonBar {
     display: flex;
     flex-direction: row;
 }
 
-.itemPhoto {
+.itemPhoto{
     margin-right: 30px;
     margin-bottom: 20px;
+}
+
+.blueButton {
+    margin-right: 15px;
 }
 
 .itemDetail {
