@@ -46,8 +46,12 @@ CREATE TABLE user_cart(
 )
 CREATE TABLE paid(
     transact_id NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    FName varchar(255),
+    LName varchar(255),
+    ccnum varchar(16),
+    ccvv varchar(3),
+    ccmonth DATE,
     Total int,
-    ccnum varchar(100),
     UName varchar(255) FOREIGN KEY REFERENCES user_form(UName)
 )
 
