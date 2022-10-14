@@ -25,7 +25,7 @@
             <li><a class="menuBar active barLast" href="">My Account</a></li>
         </ul>
         <h2><b>Shopping Cart</b></h2>
-        <form>
+        <form action="shipping.html" method="post" enctype="multipart/form-data">
 
             <div class="cartItem">
                 <div class="itemPhoto">
@@ -46,7 +46,6 @@
                     </table>
                     <div class="buttonBar">
                     <input class="blueButton removeItem" type="submit" value="Remove Item" />
-                    <input class="blueButton updateQuantity" type="submit" value="Update Quantity" />
                 </div>
                 </div>
             </div>
@@ -70,13 +69,12 @@
                     </table>
                     <div class="buttonBar">
                     <input class="blueButton removeItem" type="submit" value="Remove Item" />
-                    <input class="blueButton updateQuantity" type="submit" value="Update Quantity" />
                 </div>
                 </div>
             </div>
 
             <div class="bar bottomBar">
-                <input class="bigYellow" type="submit" value="Buy Now" />
+                <input class="bigYellow" name="buy" type="submit" value="Buy Now" />
             </div>
 
             <div class="bottomSpacer"></div>
