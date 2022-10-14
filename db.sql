@@ -22,7 +22,8 @@ CREATE TABLE ItemN(
     Amount int,
     Category varchar(100),
     itemCon varchar(100),
-    Description text
+    Description text,
+    posted timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) AUTO_INCREMENT = 1;
 
 CREATE TABLE ItemU(
@@ -33,7 +34,8 @@ CREATE TABLE ItemU(
     Amount int,
     Category varchar(100),
     itemCon varchar(100),
-    Description text
+    Description text,
+    posted timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) AUTO_INCREMENT = 1;
 
 CREATE TABLE user_cart(
@@ -52,7 +54,8 @@ CREATE TABLE paid(
     ccvv varchar(3),
     ccmonth DATE,
     Total int,
-    UName varchar(255) FOREIGN KEY REFERENCES user_form(UName)
+    UName varchar(255) FOREIGN KEY REFERENCES user_form(UName),
+    updated timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 )
 
 
