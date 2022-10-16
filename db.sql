@@ -12,7 +12,7 @@ CREATE TABLE user_form(
     Password varchar(128),
     date_of_birth DATE,
     Email varchar(100)
-) AUTO_INCREMENT = 1;
+)
 
 CREATE TABLE ItemN(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -24,7 +24,7 @@ CREATE TABLE ItemN(
     itemCon varchar(100),
     Description text,
     posted timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) AUTO_INCREMENT = 1;
+)
 
 CREATE TABLE ItemU(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -36,7 +36,7 @@ CREATE TABLE ItemU(
     itemCon varchar(100),
     Description text,
     posted timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) AUTO_INCREMENT = 1;
+)
 
 CREATE TABLE user_cart(
     cart_id NOT NULL AUTO_INCREMENT PRIMARY KEY,
