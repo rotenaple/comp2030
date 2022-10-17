@@ -68,6 +68,41 @@ CREATE TABLE paid(
     FOREIGN KEY (UName) REFERENCES user_form(UName)
 );
 
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Testitem', 'Greg Smtih', '12.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Camping Tent Grey', 'Timmy Tom', '30.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Old Fishing Rod', 'Greg Smtih', '15', '2.99', '1', '1', 'Tools', 'New', 'Its Very Good like New Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Mower', 'Greg Smtih', '120.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Camping Kettle', 'Greg Smtih', '6', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Weedwacker', 'Greg Smtih', '60', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Roses', 'Greg Smtih', '3', '2.99', '1', '10', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Hoses', 'Greg Smtih', '12.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Scrapwood', 'Greg Smtih', '10', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'Trailer', 'Greg Smtih', '1200', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'BBQ', 'Greg Smtih', '75', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+
+
 CREATE user IF NOT EXISTS dbadmin@localhost;
 GRANT all privileges ON Group2030.user_form TO dbadmin@localhost;
 GRANT all privileges ON Group2030.ItemN TO dbadmin@localhost;
