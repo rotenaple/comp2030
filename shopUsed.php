@@ -14,15 +14,15 @@ require_once "ACCdatabase.php";
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/styleShop.css" />
-    <title>Shop Items</title>
+    <title>Shop Used Items</title>
 </head>
 
 <body>
     <div class="container">
         <h1>Welcome to SENIOR</h1>
         <ul class="bar">
-            <li><a class="menuBar active" href="shopNew.php">Shop New</a></li>
-            <li><a class="menuBar" href="shopUsed.php">Shop Used</a></li>
+            <li><a class="menuBar" href="shopNew.php">Shop New</a></li>
+            <li><a class="menuBar active" href="shopUsed.php">Shop Used</a></li>
             <li><a class="menuBar" href="sellUsed.html">Sell</a></li>
             <li><a class="menuBar" href="AccMain.php">My Account</a></li>
             <li><a class="menuBar barlast" href="logon.php">Login / Signup</a></li>
@@ -34,13 +34,13 @@ require_once "ACCdatabase.php";
         <option value="Tents">Tents</option>
         <option value="Cooking">Cooking</option>
         <option value="Tools">Tools</option>
-      </select>
+        </select>
             <input type="text" class="searchBox" placeholder="Search...">
             <input type="button" class="searchBtn" value="Go!">
         </div>
 
         <?php
-        $query = "SELECT * FROM ItemN";
+        $query = "SELECT * FROM ItemU";
         $result = mysqli_query($conn,$query);
         ?>
 
