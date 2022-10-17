@@ -15,11 +15,11 @@ if (isset($_GET['id'])) {
     // Check if the product exists (array is not empty)
     if (!$row) {
         // Simple error to display if the id for the product doesn't exists (array is empty)
-        exit(' Product does not exist!');
+        echo (' Product does not exist!');
     }
 } else {
     // Simple error to display if the id wasn't specified
-    exit(' Id is not specified!');
+    echo (' Id is not specified!');
 }
 ?>
 

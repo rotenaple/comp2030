@@ -25,7 +25,7 @@ require_once "ACCdatabase.php";
             <li><a class="menuBar" href="shopUsed.php">Shop Used</a></li>
             <li><a class="menuBar" href="sellUsed.html">Sell</a></li>
             <li><a class="menuBar" href="AccMain.php">My Account</a></li>
-            <li><a class="menuBar barlast" href="logon.php">Login / Signup</a></li>
+            <li><a class="menuBar barlast" href="AccLog.html">Login / Signup</a></li>
         </ul>
 
         <div class="searchBar">
