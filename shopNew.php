@@ -51,7 +51,7 @@ require_once "ACCdatabase.php";
             while ($row = mysqli_fetch_array($result)){?>
             <form method="GET" action="shopNew.html?id=<?=$row['id'] ?>">
              
-            <a class="flexChild" href="https://google.com"><img src="img/<?= $row['image'] ?>" /> <br><?= $row['PName'] ?> $<?= $row['Cost'] ?></a>
+            <a class="flexChild" href="view.php"><img src="img/<?= $row['image'] ?>" /> <br><?= $row['PName'] ?> $<?= $row['Cost'] ?></a>
             <?php }
         ?>
         </div>

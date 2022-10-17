@@ -7,12 +7,13 @@
 if (isset($_GET['id'])) {
     echo 'can get id:';echo$_GET['id'];
     require_once "ACCdatabase.php";
-    $query = "SELECT * FROM ItemN WHERE id = ?";
-    
-    $result = mysqli_query($conn,$query);
+    $query = "SELECT * FROM ItemN WHERE id = ?;";
+    $statement = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($statement, $query);
+    mysqli_stmt_bind_param($statement, 'i', $_GET["id"]);
     $row = mysqli_fetch_array($result);
     // Check if the product exists (array is not empty)
-    if (!$product) {
+    if (!$row) {
         // Simple error to display if the id for the product doesn't exists (array is empty)
         exit(' Product does not exist!');
     }
@@ -52,7 +53,7 @@ if (isset($_GET['id'])) {
                     <img src="img/placeholder.png">
                 </div>
                 <div class="itemDetail">
-                    <div class="productName"><?= $row['PName'] ?></div>
+                    <h1 class="productName"><?= $row['PName'] ?></h1>
                     <div class="productCost">$99.9</div>
                     <table>
                         <tr>
