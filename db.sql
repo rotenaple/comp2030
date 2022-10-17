@@ -73,6 +73,12 @@ CREATE TABLE user_image(
     filename varchar(100) NOT NULL
 );
 
+CREATE TABLE seller_image(
+    image_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    filename varchar(100) NOT NULL,
+    FOREIGN KEY (id) REFERENCES ItemU(id)
+);
+
 
 INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
 VALUES (NULL, 'Testitem', 'Greg Smtih', '12.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);

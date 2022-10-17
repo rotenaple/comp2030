@@ -7,10 +7,12 @@
 if (isset($_GET['id'])) {
     echo 'can get id:';echo$_GET['id'];
     require_once "ACCdatabase.php";
-    $query = "SELECT * FROM ItemN WHERE id = ?;";
+    $sql = "SELECT * FROM ItemN WHERE id = ?;";
     $statement = mysqli_stmt_init($conn);
-    mysqli_stmt_prepare($statement, $query);
+    mysqli_stmt_prepare($statement, $sql);
+    
     mysqli_stmt_bind_param($statement, 'i', $_GET["id"]);
+    $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result);
     // Check if the product exists (array is not empty)
     if (!$row) {
