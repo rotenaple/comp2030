@@ -1,8 +1,9 @@
 <?php
+session_start();
 if (isset($_POST["order"])){
     require_once "ACCdatabase.php";
 
-    $sql = "INSERT INTO paid (FName, LName, ccnum, ccvv, ccmonth, Total, UName)
+    $sql = "INSERT INTO paid (UName, FName, LName, ccnum, ccvv, ccmonth, Total)
         VALUES (?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = mysqli_stmt_init($conn);
@@ -13,16 +14,17 @@ if (isset($_POST["order"])){
 
     $sccnum;
     $scv;
-    $username;
+    $username = $_SESSION['username'];
 
     $stmt->bind_param("sssssss",
+                $username,
                 htmlspecialchars($_POST["Fname"]),
                 htmlspecialchars($_POST["Lname"]),
                 $sccnum,
                 $scv,
                 htmlspecialchars($_POST["edate"]),
                 htmlspecialchars($_POST["Total"]),
-                $username);
+                );
     
     if ($stmt->execute()) { 
         header("Location: OrderComplete.html");
