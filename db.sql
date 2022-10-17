@@ -10,15 +10,20 @@ CREATE TABLE user_form(
     FName varchar(255),
     Password varchar(128),
     date_of_birth DATE,
-    Email varchar(100)
+    Email varchar(100),
+    address_street varchar(64),
+    address_suburb varchar(64),
+    address_state varchar(64)
 );
 
 CREATE TABLE ItemN(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     PName varchar(100),
+    Seller_UName varchar(255), 
     Cost int,
     Ship int,
     Amount int,
+    Available_Amount int,
     Category varchar(100),
     itemCon varchar(100),
     Description text,
@@ -28,9 +33,11 @@ CREATE TABLE ItemN(
 CREATE TABLE ItemU(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     PName varchar(100),
+    Seller_UName varchar(255), 
     Cost int,
     Ship int,
     Amount int,
+    Available_Amount int,
     Category varchar(100),
     itemCon varchar(100),
     Description text,
@@ -49,6 +56,7 @@ CREATE TABLE user_cart(
 
 CREATE TABLE paid(
     UName varchar(255),
+    Seller_UName varchar(255), 
     transact_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     FName varchar(255),
     LName varchar(255),
