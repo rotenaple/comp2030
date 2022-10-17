@@ -41,24 +41,31 @@ require_once "ACCdatabase.php";
             <input type="button" class="searchBtn" value="Go!">
         </div>
 
-
-        <div class="flexParent">
-
         <?php
         $query = "SELECT * FROM ItemN";
         $result = mysqli_query($conn,$query);
-
-            while ($row = mysqli_fetch_array($result)){?>
-            <form method="GET" action="shopNew.html?id=<?=$row['id'] ?>">
-             
-            <a class="flexChild" href="view.php"><img src="img/<?= $row['image'] ?>" /> <br><?= $row['PName'] ?> $<?= $row['Cost'] ?></a>
-            <?php }
         ?>
+
+        <div>
+        <?php
+            while ($row = mysqli_fetch_array($result)){?>
+            <form method="GET" class="flexParent" action="view.php?id=<?=$row['id'] ?>">
+
+
+             
+            <a class="flexChild" href="view.php?id=<?=$row['id'] ?>"><img src="img/placeholder.png" /> <br><?= $row['PName'] ?> $<?= $row['Cost'] ?></a>
+
+
+<?php }
+        ?>
+        
         </div>
+        </form>
+        
         <div class="bar bottomBar">
             <a class="bigYellow" href="cart.html"> <img class="icon" src="img/icons/cart.svg" height="30" />Shopping Cart</a>
         </div>
-        </form>
+
 
 
         <div class="bottomSpacer">
