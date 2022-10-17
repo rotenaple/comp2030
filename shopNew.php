@@ -1,3 +1,7 @@
+<?php
+require_once "ACCdatabase.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +11,9 @@
     <meta name="description" content="Shop Items" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/styleShop.css" />
     <title>Shop Items</title>
@@ -35,25 +41,25 @@
             <input type="button" class="searchBtn" value="Go!">
         </div>
 
+
         <div class="flexParent">
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
-            <a class="flexChild" href="https://google.com"><img src="img/placeholder.png" /> <br>Product Name $99</a>
 
+        <?php
+        $query = "SELECT * FROM ItemN";
+        $result = mysqli_query($conn,$query);
+
+            while ($row = mysqli_fetch_array($result)){?>
+            <form method="GET" action="shopNew.html?id=<?=$row['id'] ?>">
+             
+            <a class="flexChild" href="https://google.com"><img src="img/<?= $row['image'] ?>" /> <br><?= $row['PName'] ?> $<?= $row['Cost'] ?></a>
+            <?php }
+        ?>
         </div>
-
         <div class="bar bottomBar">
             <a class="bigYellow" href="cart.html"> <img class="icon" src="img/icons/cart.svg" height="30" />Shopping Cart</a>
         </div>
+        </form>
+
 
         <div class="bottomSpacer">
         </div>
