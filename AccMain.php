@@ -24,11 +24,11 @@ if (!isset($_SESSION['username'])) {
     <div class="container">
         <h1>Welcome to SENIOR</h1>
         <ul class="bar">
-            <li><a class="menuBar" href="">Shop New</a></li>
-            <li><a class="menuBar" href="sellUsed.html">Shop Used</a></li>
-            <li><a class="menuBar barlast" href="">Sell</a></li>
-            <li><a class="menuBar" href="">About Us</a></li>
-            <li><a class="menuBar active" href="myAccount.html">My Account</a></li>
+        <li><a class="menuBar" href="shopNew.php">Shop New</a></li>
+            <li><a class="menuBar" href="shopUsed.php">Shop Used</a></li>
+            <li><a class="menuBar" href="sellUsed.html">Sell</a></li>
+            <li><a class="menuBar" href="">Messages</a></li>
+            <li><a class="menuBar active" href="Register.html">My Account</a></li>
         </ul>
      <?php if (isset($_SESSION['success'])) : ?>
             <h2 id="ACCINFO">Your Account Infomation</h2>

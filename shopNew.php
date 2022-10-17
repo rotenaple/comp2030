@@ -24,10 +24,10 @@ require_once "ACCdatabase.php";
         <h1>Welcome to SENIOR</h1>
         <ul class="bar">
             <li><a class="menuBar active" href="shopNew.php">Shop New</a></li>
-            <li><a class="menuBar" href="shopUsed.html">Shop Used</a></li>
+            <li><a class="menuBar" href="shopUsed.php">Shop Used</a></li>
             <li><a class="menuBar" href="sellUsed.html">Sell</a></li>
             <li><a class="menuBar" href="">Messages</a></li>
-            <li><a class="menuBar barLast" href="">My Account</a></li>
+            <li><a class="menuBar barLast" href="Register.html">My Account</a></li>
         </ul>
 
         <div class="searchBar">
