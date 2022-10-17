@@ -28,7 +28,7 @@ if (!isset($_SESSION['username'])) {
             <li><a class="menuBar" href="shopUsed.php">Shop Used</a></li>
             <li><a class="menuBar" href="sellUsed.html">Sell</a></li>
             <li><a class="menuBar active" href="AccMain.php">My Account</a></li>
-            <li><a class="menuBar barlast" href="logon.php">Login / Signup</a></li>
+            <li><a class="menuBar barlast" href="AccLog.html">Login / Signup</a></li>
         </ul>
      <?php if (isset($_SESSION['success'])) : ?>
             <h2 id="ACCINFO">Your Account Infomation</h2>
