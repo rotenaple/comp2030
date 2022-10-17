@@ -5,6 +5,27 @@ if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You have to log in";
     header("Location: AccLog.html");
 }
+
+if (isset($_POST['upload'])) {
+    require_once "ACCdatabase.php";
+
+    $filename = $_FILES["uploadfile"]["name"];
+    $tempname = $_FILES["uploadfile"]["tmp_name"];
+    $folder = "./img/" . $filename;
+ 
+    // Get all the submitted data from the form
+    $sql = "INSERT INTO user_image (filename) VALUES ('$filename');";
+ 
+    // Execute query
+    mysqli_query($conn, $sql);
+ 
+    // Now let's move the uploaded image into the folder: image
+    if (move_uploaded_file($tempname, $folder)) {
+        echo "<h3>  Image uploaded successfully!</h3>";
+    } else {
+        echo "<h3>  Failed to upload image!</h3>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,8 +55,25 @@ if (!isset($_SESSION['username'])) {
             <h2 id="ACCINFO">Your Account Infomation</h2>
 
         <div>
-            <img id="ACCIMG" src="file">
-            <input type="button" id="ACC-UPLDIMG" value="Upload Image">
+            <?php
+            require_once "ACCdatabase.php";
+            $sql = "SELECT * FROM user_image;";
+            $result = mysqli_query($conn, $sql);
+
+            while ($data = mysqli_fetch_assoc($result)) {
+            ?>
+            <img src="./img/<?php echo $data['filename']; ?>">
+            <?php
+            }
+            ?>
+            <form method="POST" action="" enctype="multipart/form-data">
+            <div class="form-group">
+                <input class="form-control" type="file" name="uploadfile" value="" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit" name="upload">UPLOAD IMAGE</button>
+            </div>
+            </form>
         </div>
         <form action="Accupdate.php" method="post" enctype="multipart/form-data">
         <tr>
