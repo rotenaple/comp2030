@@ -18,7 +18,7 @@ if (isset($_POST["create"])) {
                 htmlspecialchars($_POST["amount"]),
                 htmlspecialchars($_POST["productcat"]),
                 htmlspecialchars($_POST["isUsed"]),
-                htmlspecialchars($_POST["description"]);
+                htmlspecialchars($_POST["description"]));
 
     if ($stmt->execute()) { 
         header("Location: SellComplete.html");
