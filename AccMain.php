@@ -62,16 +62,15 @@ if (isset($_POST['upload'])) {
 
             while ($data = mysqli_fetch_assoc($result)) {
             ?>
-            <img src="./img/<?php echo $data['filename']; ?>">
-            <?php
-            }
-            ?>
+            <img src="./img/<?php echo $data['filename']; ?>" height="150px">
+            <?php } ?>
+
             <form method="POST" action="" enctype="multipart/form-data">
             <div class="form-group">
                 <input class="form-control" type="file" name="uploadfile" value="" />
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" type="submit" name="upload">UPLOAD IMAGE</button>
+                <input class="blueButton btn btn-primary" type="submit" name="upload" value="Upload Image"/>
             </div>
             </form>
         </div>
@@ -92,7 +91,7 @@ if (isset($_POST['upload'])) {
         </tr>
         <br>
         <td>
-            <td><input type="submit" name="update" value="Update"></td>
+            <td><input class="blueButton" type="submit" name="update" value="Update"></td>
         </tr>
      </form>
      <?php endif ?>
