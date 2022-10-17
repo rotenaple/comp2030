@@ -34,27 +34,34 @@
         <form action="action" method="post" enctype="multipart/form-data">
             <table>
                 <tr>
-                    <td>First Name</td>
-                    <td class="text-1"><input name="Fname" type="text" placeholder="Required" required></td>
-                    <td>Last Name</td>
-                    <td class="text-1"><input name="Lname" type="text" placeholder="Required" required></td>
-                </tr>
-                <tr>
+                    <td>Name on Card</td>
+                    <td class="text-1"><input name="cname" type="text" placeholder="Required" required></td>
                     <td>Card Number</td>
                     <td class="text-1"><input name="cnum" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="16" size="16" placeholder="Required" required></td>
-                    <td>CVV</td>
-                    <td class="text-1"><input name="cvv" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="3" size="3" placeholder="NNN" required></td>
                 </tr>
                 <tr>
+                    <td>CVV</td>
+                    <td class="text-1"><input name="cvv" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="3" size="3" placeholder="NNN" required></td>
                     <td>Expiry Date</td>
                     <td class="text-1"><input name="edate" type="month" placeholder="Required" required></td>
                 </tr>
             </table>
 
             <h2>Shipping Address</h2>
-            <p>1 North Tce <br>Adelaide SA 5000 <br> South Australia</p>
-            <b>Shipping Somewhere Else?</b>
-            <input class="blueButton" type="submit" value="Ship To Another Address" />
+            <table>
+                <tr>
+                    <td>Address</td>
+                    <td class="text-1"><input name="address" type="text" placeholder="1 North Tce" required></td>
+                    <td>City</td>
+                    <td class="text-1"><input name="city" type="text" placeholder="Adelaide" required></td>
+                </tr>
+                <tr>
+                    <td>Zip code</td>
+                    <td class="text-1"><input name="zip" type="text" placeholder="5000" required></td>
+                    <td>State</td>
+                    <td class="text-1"><input name="state" type="text" placeholder="South Australia" required></td>
+                </tr>
+            </table>
 
             <div class="bar bottomBar">
                 <input class="bigYellow" name="order" type="submit" value="Place Order" />

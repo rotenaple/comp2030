@@ -12,8 +12,8 @@ if (isset($_POST["order"])){
        die("Error within SQL " . $conn->error);
     }
 
-    $sccnum;
-    $scv;
+    $sccnum = hash('sha256', $_POST["cnum"]);
+    $scv = hash('sha256', $_POST["cvv"]);
     $username = $_SESSION['username'];
 
     $stmt->bind_param("sssssss",
