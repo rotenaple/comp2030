@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+unset($_SESSION['cart']);
 $_SESSION['success'] = "";
 
 if (isset($_POST["logon"])) {

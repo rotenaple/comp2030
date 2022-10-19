@@ -10,14 +10,12 @@ CREATE TABLE user_form(
     FName varchar(255),
     Password varchar(128),
     date_of_birth DATE,
-    Email varchar(100),
-    address_street varchar(64),
-    address_suburb varchar(64),
-    address_state varchar(64)
+    Email varchar(100)
 );
 
 CREATE TABLE ItemN(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    filename varchar(100) NOT NULL,
     PName varchar(100),
     Seller_UName varchar(255), 
     Cost int,
@@ -55,14 +53,12 @@ CREATE TABLE user_cart(
 );
 
 CREATE TABLE paid(
-    UName varchar(255),
-    Seller_UName varchar(255), 
     transact_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    FName varchar(255),
-    LName varchar(255),
+    UName varchar(255),
+    CName varchar(255),
     ccnum varchar(255),
     ccvv varchar(255),
-    ccmonth DATE,
+    ccmonth varchar(255),
     Total int,
     updated timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (UName) REFERENCES user_form(UName)
@@ -73,45 +69,39 @@ CREATE TABLE user_image(
     filename varchar(100) NOT NULL
 );
 
-CREATE TABLE seller_image(
-    image_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    filename varchar(100) NOT NULL,
-    FOREIGN KEY (id) REFERENCES ItemU(id)
-);
 
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Testitem', 'Greg Smtih', '12.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Testitem', 'Greg Smtih', '12.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Camping Tent Grey', 'Timmy Tom', '30.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Camping Tent Grey', 'Timmy Tom', '30.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Old Fishing Rod', 'Greg Smtih', '15', '2.99', '1', '1', 'Tools', 'New', 'Its Very Good like New Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Old Fishing Rod', 'Greg Smtih', '15', '2.99', '1', '1', 'Tools', 'New', 'Its Very Good like New Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Mower', 'Greg Smtih', '120.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Mower', 'Greg Smtih', '120.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Camping Kettle', 'Greg Smtih', '6', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Camping Kettle', 'Greg Smtih', '6', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Weedwacker', 'Greg Smtih', '60', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Weedwacker', 'Greg Smtih', '60', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Roses', 'Greg Smtih', '3', '2.99', '1', '10', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Roses', 'Greg Smtih', '3', '2.99', '1', '10', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Hoses', 'Greg Smtih', '12.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Hoses', 'Greg Smtih', '12.99', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Scrapwood', 'Greg Smtih', '10', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Scrapwood', 'Greg Smtih', '10', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'Trailer', 'Greg Smtih', '1200', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'Trailer', 'Greg Smtih', '1200', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
-
-INSERT INTO `itemn` (`id`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
-VALUES (NULL, 'BBQ', 'Greg Smtih', '75', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
+INSERT INTO `itemn` (`id`, `filename`, `PName`, `Seller_UName`, `Cost`, `Ship`, `Amount`, `Available_Amount`, `Category`, `itemCon`, `Description`, `posted`) 
+VALUES (NULL, 'product1.jpg', 'BBQ', 'Greg Smtih', '75', '2.99', '1', '1', 'Fishing', 'New', 'Its Very Good Proin at ante in dolor mollis blandit at at orci. Etiam porttitor dignissim justo at suscipit', CURRENT_TIMESTAMP);
 
 
 CREATE user IF NOT EXISTS dbadmin@localhost;

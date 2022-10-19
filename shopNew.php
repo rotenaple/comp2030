@@ -51,7 +51,7 @@ require_once "ACCdatabase.php";
 
 
              
-            <a class="flexChild" href="view.php?id=<?=$row['id'] ?>"><img src="img/placeholder.png" /> <br><?= $row['PName'] ?> $<?= $row['Cost'] ?></a>
+            <a class="flexChild" href="view.php?id=<?=$row['id'] ?>"><img src="./img/<?php echo $row['filename']; ?>" /> <br><?= $row['PName'] ?> $<?= $row['Cost'] ?></a>
 
 
 <?php }
@@ -61,7 +61,7 @@ require_once "ACCdatabase.php";
         </form>
         
         <div class="bar bottomBar">
-            <a class="bigYellow" href="cart.html"> <img class="icon" src="img/icons/cart.svg" height="30" />Shopping Cart</a>
+            <a class="bigYellow" href="cart.php"> <img class="icon" src="img/icons/cart.svg" height="30" />Shopping Cart</a>
         </div>
 
 

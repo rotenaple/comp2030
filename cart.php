@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,23 +28,33 @@
             <li><a class="menuBar barlast" href="AccLog.html">Login / Signup</a></li>
         </ul>
         <h2><b>Shopping Cart</b></h2>
-        <form action="shipping.html" method="post" enctype="multipart/form-data">
+        <?php
+        $total = 0;
+        if(!empty($_SESSION['cart'])) {
+
+            foreach($_SESSION['cart'] as $key => $item) {
+                ?>
+        <form action="shipping.php" method="post" enctype="multipart/form-data">
 
             <div class="cartItem">
                 <div class="itemPhoto">
                     <img src="img/placeholder.png">
                 </div>
                 <div class="itemDetail">
-                    <div class="productName">Product name</div>
-                    <div class="productCost">$99.9</div>
+                    <div class="productName"><?= $item['name'] ?></div>
+                    <div class="productCost">$<?= $item['price'] ?></div>
                     <table>
                         <tr>
                             <td>Shipping:</td>
-                            <td class="shippingCost">$9.9</td>
+                            <td class="shippingCost">$<?= $item['shipping'] ?></td>
                         </tr>
                         <tr>
                             <td>Quantity:</td>
-                            <td><input class="amount text-1" type="number" value="1" min="1" required></td>
+                            <td class="amount text-1"><?= $item['quantity'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Item Total:</td>
+                            <td class="amount text-1">$<?= number_format(($item['price']*$item['quantity'])+ $item['shipping'])  ?></td>
                         </tr>
                     </table>
                     <div class="buttonBar">
@@ -49,32 +62,16 @@
                 </div>
                 </div>
             </div>
-
-            <div class="cartItem">
-                <div class="itemPhoto">
-                    <img src="img/placeholder.png">
-                </div>
-                <div class="itemDetail">
-                    <div class="productName">Product name</div>
-                    <div class="productCost">$99.9</div>
-                    <table>
-                        <tr>
-                            <td>Shipping:</td>
-                            <td class="shippingCost">$9.9</td>
-                        </tr>
-                        <tr>
-                            <td>Quantity:</td>
-                            <td><input class="amount text-1" type="number" value="1" min="1" required></td>
-                        </tr>
-                    </table>
-                    <div class="buttonBar">
-                    <input class="blueButton removeItem" type="submit" value="Remove Item" />
-                </div>
-                </div>
-            </div>
-
+            <?php
+            
+            $total = $total + (($item['price']*$item['quantity'])+ $item['shipping']);
+        }
+        }
+        ?>
             
             <div class="bar bottomBar">
+                <h3>Total Cost:$<?= number_format($total) ?> </h3>
+                <input type="hidden" name="TCost" value="<?= number_format($total) ?>">
                 <input class="bigYellow" name="buy" type="submit" value="Buy Now" />
             </div>
 
